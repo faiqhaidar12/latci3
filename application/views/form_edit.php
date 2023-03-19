@@ -5,25 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Add</title>
+    <title>Form Edit</title>
 </head>
 
 <body>
-    <h1>Tambah Artikel</h1>
+    <h1>Edit Artikel</h1>
     <form method="POST">
         <label for="">Title</label>
         <br>
-        <input type="text" name="title" placeholder="Judul">
+        <input type="text" name="title" value="<?php echo $blog['title']; ?>">
         <br>
         <label for="">Url</label>
         <br>
-        <input type="text" name="url">
+        <input type="text" name="url" value="<?php echo $blog['url']; ?>">
         <br>
         <label for="">Content</label>
         <br>
-        <textarea name="content" id="content" cols="30" rows="10"></textarea>
+        <textarea name="content" id="content" cols="30" rows="10"><?php echo $blog['content']; ?></textarea>
         <br>
-        <button type="submit">Simpan</button>
+        <button type="submit">Edit</button>
     </form>
 </body>
 
