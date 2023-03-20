@@ -63,7 +63,7 @@
                             <?php echo $blog['title']; ?>
                         </a>
                         <p class="post-meta">
-                            <?php echo $blog['content']; ?> <br> <?php echo $blog['date']; ?>
+                            <?php echo word_limiter($blog['content'], 20, ' ...'); ?>
                         </p>
                     </div>
                 <?php

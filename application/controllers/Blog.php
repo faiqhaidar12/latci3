@@ -11,6 +11,7 @@ class Blog extends CI_Controller
         $this->load->helper('url');
         $this->load->library('pagination');
         $this->load->model('Blog_model');
+        $this->load->helper('text');
     }
 
     public function index()
