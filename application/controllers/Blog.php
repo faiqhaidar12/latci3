@@ -9,6 +9,7 @@ class Blog extends CI_Controller
 
         $this->load->database();
         $this->load->helper('url');
+        $this->load->library('pagination');
         $this->load->model('Blog_model');
     }
 
@@ -16,8 +17,6 @@ class Blog extends CI_Controller
     {
         $query = $this->Blog_model->getBlogs();
         $data['blogs'] = $query->result_array();
-
-
         $this->load->view('blog', $data);
     }
 
@@ -61,8 +60,16 @@ class Blog extends CI_Controller
                 echo "Berhasil di edit!";
             else
                 echo "Gagal di submit!";
+
+            redirect('/');
         }
 
         $this->load->view('form_edit', $data);
+    }
+
+    public function delete($id)
+    {
+        $this->Blog_model->deleteBlog($id);
+        redirect('/');
     }
 }

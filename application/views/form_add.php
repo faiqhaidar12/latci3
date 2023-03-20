@@ -10,7 +10,11 @@
 
 <body>
     <h1>Tambah Artikel</h1>
+    <a href="<?php echo site_url('/'); ?>">Home</a>
+    <hr>
+    <br>
     <form method="POST">
+        <br>
         <label for="">Title</label>
         <br>
         <input type="text" name="title" placeholder="Judul">

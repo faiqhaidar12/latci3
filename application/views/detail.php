@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <a href="<?php echo site_url('blog'); ?>">home</a>
+    <hr>
+    <a href="<?php echo site_url('blog/delete/' . $blog['id']); ?>"> Delete</a>
+    <a href="<?php echo site_url('blog/edit/' . $blog['id']); ?>"> Edit</a>
     <h1><?php echo $blog['title']; ?></h1>
     <p><?php echo $blog['content']; ?></p>
 </body>
